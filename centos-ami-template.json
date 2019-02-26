@@ -34,7 +34,6 @@
                       "echo 'cleaning cache'",
                       "sudo yum clean all",
                       "sudo yum makecache",
-		      "sudo yum update",
                       "echo 'installing oracle jdk 8u201'",
                       "cd ~",
                       "sudo yum install wget -y",
