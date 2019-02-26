@@ -1,7 +1,5 @@
 {
     "variables": {
-        "aws_access_key": "AKIAIR524BY776IVW6WQ",
-        "aws_secret_key": "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",
         "aws_region": "us-east-1",
         "source_ami": "ami-9887c6e7",
         "ssh_username":"centos"
@@ -10,8 +8,6 @@
     "builders": [
         {
             "type": "amazon-ebs",
-            "access_key": "{{user `aws_access_key`}}",
-            "secret_key": "{{user `aws_secret_key`}}",
             "region": "{{user `aws_region`}}",
             "instance_type": "t2.micro",
             "source_ami": "{{user `source_ami`}}",
