@@ -25,3 +25,5 @@ packer build \
     -var 'subnet_id=REDACTED' \
     centos-ami-template.json
 ```
+
+#
