@@ -15,6 +15,8 @@ packer validate ubuntu-ami.json
 ```
 packer validate centos-ami-template.json
 
+circleci
+
 ## Build AMI
 
 ```
