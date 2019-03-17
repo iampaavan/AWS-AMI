@@ -14,8 +14,8 @@ jobs:
       - run:
           name: Download packer
           command: |
-            wget -q https://releases.hashicorp.com/packer/1.3.4/packer_1.3.4_linux_amd64.zip
-            unzip packer*.zip
+            wget -q https://releases.hashicorp.com/packer/1.3.4/packer_1.3.4_linux_amd64.zip 
+            unzip packer*.zip  
             chmod +x packer
       - run:
           name: Validate Packer Template
@@ -25,7 +25,6 @@ jobs:
           command: |
             ./packer build \
             -var "aws_region=${AWS_REGION}" \
-            -var "aws_access_key=${AWS_ACCESS_KEY}" \
-            -var "aws_secret_key=${AWS_SECRET_KEY}" \
             -var "subnet_id=${AWS_SUBNET_ID}" \
             centos-ami-template.json
+
