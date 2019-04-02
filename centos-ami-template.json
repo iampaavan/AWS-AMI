@@ -46,7 +46,7 @@
                       "wget 'https://s3.amazonaws.com/amazoncloudwatch-agent/centos/amd64/latest/amazon-cloudwatch-agent.rpm'",
                       "cd /home/centos",
                       "sudo rpm -U ./amazon-cloudwatch-agent.rpm",
-                      "echo 'installed cloudwatch agent'"
+                      "echo 'installed cloudwatch agent'",
                       "wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install",
                       "chmod +x ./install",
                       "sudo ./install auto",
