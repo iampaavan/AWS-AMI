@@ -33,6 +33,7 @@
             "inline": [
                       "echo 'cleaning cache'",
                       "sudo yum clean all",
+                      "sudo yum update -y",
                       "sudo yum makecache",
                       "echo 'installing oracle jdk 8u201'",
                       "cd ~",
@@ -41,10 +42,15 @@
                       "sudo yum localinstall jdk-8u201-linux-x64.rpm -y",
                       "java -version",
                       "echo 'installed java successfully.'",
+                      "sudo yum install ruby -y",
                       "wget 'https://s3.amazonaws.com/amazoncloudwatch-agent/centos/amd64/latest/amazon-cloudwatch-agent.rpm'",
                       "cd /home/centos",
                       "sudo rpm -U ./amazon-cloudwatch-agent.rpm",
-                      "echo 'installed cloudwatch agent'"
+                      "echo 'installed cloudwatch agent'",
+                      "wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install",
+                      "chmod +x ./install",
+                      "sudo ./install auto",
+                      "sudo service codedeploy-agent start"
                     ]
         }
     ]
